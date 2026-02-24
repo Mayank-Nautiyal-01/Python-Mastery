@@ -10,8 +10,31 @@
 
 #! Numeric Types
 #? int (Integer): Whole numbers. ex: x=-9
+# int is immutable
+x = 5
+x = x + 1
+print(x)
+# now it will print x as 6 but deep down all we think 5 become 6 but not 
+# *what actually happens is 
+# Python reads x → points to object 5
+# Calculates 5 + 1
+# Creates NEW object 6
+# Makes x point to 6
+# The original 5 was never modified.
+# we can use id function too to check they both gonna give different obj id 
+
 
 #? float :Decimal numbers. ex:pi = 3.14
+# float is also immutable.Just like int, once a float object is created, it cannot be changed.
+
+x = 3.5
+print(id(x))
+# 1831824202928
+
+x = x + 1.5
+print(id(x))
+# 1831824200112
+# see the id is changed,x now points to 5.0.
 
 #! Boolean Type
 # Only two values:
@@ -125,7 +148,9 @@ print(id(d))
 #* Immutable:
 # Cannot change internal state
 # Any "change" creates new object
+# ex:int,float,bool,str,tuple
 
 #* Mutable:
 # Can change internal state
 # Same object modified
+# ex:list,set,dict
