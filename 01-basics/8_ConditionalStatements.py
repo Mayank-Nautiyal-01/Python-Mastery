@@ -15,7 +15,7 @@ age = 18
 
 
 if age >= 18:
-    # Notice the indentation! Python uses indentation to define code blocks.
+    # Notice the indentation! Python uses indentation to define code blocks, we discuss it earlier topic when there is a indentation error comes check that too
     # This print statement only runs because 18 is greater than or equal to 18 (True).
     print("You are eligible to vote.")
 
